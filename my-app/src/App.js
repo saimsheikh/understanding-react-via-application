@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar';
-
+import Contact from './components/Contact';
 import Alert from './components/Alert';
 import About from './components/about';
 import  React, { useState } from 'react';
@@ -47,12 +47,13 @@ function App() {
 
   return (
     <>
-      <Navbar title="TextUtils" about="about us" mode={mode} togglemode={togglemode} />
+      <Navbar title="TextUtils" about="about us" contact="Contact Us" mode={mode} togglemode={togglemode} />
       <Alert alert={alert}/>
       <div>
         <Routes>
             <Route  path="/" element={<Homepage/>} />
             <Route  path="/About" element={<About />}/>
+            <Route path="/Contact"element={<Contact />} mode={mode}/>
         </Routes>
       </div>
       
